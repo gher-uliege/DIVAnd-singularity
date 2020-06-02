@@ -38,8 +38,8 @@ jobs:
         cd singularity && \
         ./mconfig -p /usr/local && \
         make -C builddir && \
-        sudo make -C builddir install          
-          
+        sudo make -C builddir install
+
     - name: Check out code for the container build
       uses: actions/checkout@v1
 
@@ -48,7 +48,7 @@ jobs:
         SINGULARITY_RECIPE: Singularity
         OUTPUT_CONTAINER: container.sif
       run: |
-       ls 
+       ls
        if [ -f "${SINGULARITY_RECIPE}" ]; then
             sudo -E singularity build ${OUTPUT_CONTAINER} ${SINGULARITY_RECIPE}
        else
