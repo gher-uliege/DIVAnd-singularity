@@ -23,6 +23,7 @@ From: julia:1.4.2
     julia --eval 'using Pkg; pkg"add JSON SpecialFunctions Interact Roots"'
     julia --eval 'using Pkg; pkg"add Gumbo AbstractTrees Glob NCDatasets Knet CSV"'
     julia --eval 'using Pkg; pkg"add DataStructures Compat Mustache"'
+    julia --eval 'using Pkg; pkg"precompile"'
 
     # does not work with singularity 3.4.0
     #chmod -R 777 /opt
