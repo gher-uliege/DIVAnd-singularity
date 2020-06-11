@@ -7,9 +7,9 @@ From: julia:1.4.2
 
 %post
     apt-get -y update
+    apt-get -y install curl wget
     apt-get -y install emacs-nox
     apt-get -y install python3-pip
-    apt-get -y install curl
     pip3 install matplotlib
     ln -s /usr/local/julia/bin/julia /usr/local/bin/julia
     echo $HOME $JULIA_DEPOT_PATH
@@ -36,8 +36,14 @@ From: julia:1.4.2
     export JULIA_DEPOT_PATH=/opt/julia-depot
 
 %test
+    echo $PATH
+    ls /usr/bin/curl
     export JULIA_DEPOT_PATH=/opt/julia-depot
-    julia --eval 'using Pkg; pkg"test DIVAnd"'
+    julia --eval '@show Sys.which("curl")'
+    julia --eval '@show Base.find_curl()'
+    julia --eval '@show String(read(download("http://data-assimilation.net/")))'
+
+#    julia --eval 'using Pkg; pkg"test DIVAnd"'
 
 %runscript
     # first depot entry must be writable
