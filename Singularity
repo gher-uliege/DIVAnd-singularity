@@ -37,8 +37,13 @@ From: julia:1.4.2
 
 %test
     echo $PATH
-    ls /usr/bin/curl
+    ls -l /usr/bin/curl
+    which curl
     export JULIA_DEPOT_PATH=/opt/julia-depot
+    julia --eval '@show ENV["PATH"]'
+    julia --eval '@show isfile("/usr/bin/curl")'
+    julia --eval '@show Sys.isexecutable("/usr/bin/curl")'
+
     julia --eval '@show Sys.which("curl")'
     julia --eval '@show Base.find_curl()'
     julia --eval '@show String(read(download("http://data-assimilation.net/")))'
