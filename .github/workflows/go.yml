@@ -46,7 +46,7 @@ jobs:
     - name: Build Container
       env:
         SINGULARITY_RECIPE: Singularity
-        OUTPUT_CONTAINER: container.sif
+        OUTPUT_CONTAINER: DIVAnd.sif
       run: |
        ls
        if [ -f "${SINGULARITY_RECIPE}" ]; then
@@ -56,3 +56,9 @@ jobs:
            echo "Present working directory: $PWD"
            ls
        fi
+
+    - name: Upload container
+      uses: actions/upload-artifact@v1
+      with:
+          name: DIVAnd.sif
+          path: DIVAnd.sif
