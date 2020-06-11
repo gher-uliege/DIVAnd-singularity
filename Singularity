@@ -6,12 +6,12 @@ From: julia:1.4.2
     Julia 1.4 with DIVAnd (run from a writable directory to create .julia-depot-singularity)
 
 %post
+    ln -s /usr/local/julia/bin/julia /usr/local/bin/julia
     apt-get -y update
-    apt-get -y install curl wget
+    apt-get -y install curl
     apt-get -y install emacs-nox
     apt-get -y install python3-pip
     pip3 install matplotlib
-    ln -s /usr/local/julia/bin/julia /usr/local/bin/julia
     echo $HOME $JULIA_DEPOT_PATH
     export JULIA_DEPOT_PATH=/opt/julia-depot
     julia --eval 'using Pkg; pkg"add HTTP"'
@@ -36,19 +36,10 @@ From: julia:1.4.2
     export JULIA_DEPOT_PATH=/opt/julia-depot
 
 %test
-    echo $PATH
-    ls -l /usr/bin/curl
-    which curl
+    # PATH is set but not exported on singularity 3.4.0
+    export PATH
     export JULIA_DEPOT_PATH=/opt/julia-depot
-    julia --eval '@show ENV["PATH"]'
-    julia --eval '@show isfile("/usr/bin/curl")'
-    julia --eval '@show Sys.isexecutable("/usr/bin/curl")'
-
-    julia --eval '@show Sys.which("curl")'
-    julia --eval '@show Base.find_curl()'
-    julia --eval '@show String(read(download("http://data-assimilation.net/")))'
-
-#    julia --eval 'using Pkg; pkg"test DIVAnd"'
+    julia --eval 'using Pkg; pkg"test DIVAnd"'
 
 %runscript
     # first depot entry must be writable
