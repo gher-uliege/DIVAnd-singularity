@@ -1,9 +1,9 @@
 Bootstrap: docker
-From: julia:1.4.2
+From: julia:1.5.2
 
 
 %help
-    Julia 1.4 with DIVAnd (run from a writable directory to create .julia-depot-singularity)
+    Julia 1.5 with DIVAnd (run from a writable directory to create .julia-depot-singularity)
 
 %post
     ln -s /usr/local/julia/bin/julia /usr/local/bin/julia
@@ -23,7 +23,7 @@ From: julia:1.4.2
     julia --eval 'using Pkg; pkg"add PyPlot Interpolations MAT"'
     julia --eval 'using Pkg; pkg"add JSON SpecialFunctions Interact Roots"'
     julia --eval 'using Pkg; pkg"add Gumbo AbstractTrees Glob NCDatasets Knet CSV"'
-    julia --eval 'using Pkg; pkg"add DataStructures Compat Mustache"'
+    julia --eval 'using Pkg; pkg"add DataStructures Compat Mustache StableRNGs"'
     julia --eval 'using Pkg; pkg"precompile"'
 
     # does not work with singularity 3.4.0
