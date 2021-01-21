@@ -19,4 +19,9 @@ rm -f DIVAnd.sif; sudo singularity build DIVAnd.sif Singularity
 # Download
 
 Container images are build using github actions.
-Go to https://github.com/gher-ulg/DIVAnd-singularity/actions choose the lastest commit and go to artefact
+Go to https://github.com/gher-ulg/DIVAnd-singularity/actions choose the lastest commit and go to artefact.
+Download and unzip the image file and run with:
+
+```bash
+singularity run DIVAnd.sif
+```
