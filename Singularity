@@ -1,7 +1,6 @@
 Bootstrap: docker
 From: julia:1.5.2
 
-
 %help
     Julia 1.5 with DIVAnd (run from a writable directory to create .julia-depot-singularity)
 
