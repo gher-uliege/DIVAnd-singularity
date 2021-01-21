@@ -37,7 +37,8 @@ From: julia:1.5.3
 %test
     # PATH is set but not exported on singularity 3.4.0
     export PATH
-    export JULIA_DEPOT_PATH=/opt/julia-depot
+    mkdir /tmp/julia-depot-tmp
+    export JULIA_DEPOT_PATH=/tmp/julia-depot-tmp:/opt/julia-depot
     julia --eval 'using Pkg; pkg"test DIVAnd"'
 
 %runscript
