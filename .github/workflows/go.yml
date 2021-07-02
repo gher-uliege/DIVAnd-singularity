@@ -28,6 +28,7 @@ jobs:
       env:
         SINGULARITY_VERSION: 3.7.1
       run: |
+        echo "Working with Singularity version ${SINGULARITY_VERSION}"
         export GOPATH=/tmp/go
         mkdir -p $GOPATH
         sudo mkdir -p /usr/local/var/singularity/mnt && \
