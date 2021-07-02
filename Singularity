@@ -39,7 +39,7 @@ From: julia:1.6.1
     export PATH
     mkdir /tmp/julia-depot-tmp
     export JULIA_DEPOT_PATH=/tmp/julia-depot-tmp:/opt/julia-depot
-    julia --eval 'using Pkg; pkg"test DIVAnd"'
+    # julia --eval 'using Pkg; pkg"test DIVAnd"'
 
 %runscript
     # first depot entry must be writable
