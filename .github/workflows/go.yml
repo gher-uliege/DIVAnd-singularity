@@ -26,7 +26,7 @@ jobs:
 
     - name: Install Singularity
       env:
-        SINGULARITY_VERSION: 3.7.1
+        SINGULARITY_VERSION: 3.7.4
       run: |
         echo "Working with Singularity version ${SINGULARITY_VERSION}"
         export GOPATH=/tmp/go
