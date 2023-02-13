@@ -5,7 +5,7 @@
 # DIVAnd-singularity
 Singularity container for `DIVAnd`, the interpolation tool (https://github.com/gher-ulg/DIVAnd.jl).
 
-The container installs [`Julia`](https://julialang.org/) (version 1.8.0), DIVAnd and other required Julia packages.
+The container installs the last stable release of [`Julia`](https://julialang.org/), DIVAnd and other required Julia packages.
 
 ## Dependencies
 
