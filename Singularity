@@ -1,8 +1,8 @@
 Bootstrap: docker
-From: julia:1.8.0
+From: julia:1.8.5
 
 %help
-    Julia 1.8.0 with DIVAnd (run from a writable directory to create .julia-depot-singularity)
+    Julia 1.8.5 with DIVAnd (run from a writable directory to create .julia-depot-singularity)
 
 
 %post
@@ -17,7 +17,7 @@ From: julia:1.8.0
     julia --eval 'using Pkg; pkg"add HTTP"'
     julia --eval 'using Pkg; pkg"add PhysOcean"'
     julia --eval 'using Pkg; pkg"add https://github.com/gher-ulg/OceanPlot.jl#master"'
-    julia --eval 'using Pkg; pkg"add https://github.com/gher-ulg/DIVAnd.jl#Alex"'
+    julia --eval 'using Pkg; pkg"add https://github.com/gher-ulg/DIVAnd.jl#master"'
     julia --eval 'using Pkg; pkg"add Missings"'
     julia --eval 'using Pkg; pkg"add PackageCompiler"'
     julia --eval 'using Pkg; pkg"add PyPlot Interpolations MAT"'
