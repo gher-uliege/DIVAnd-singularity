@@ -54,4 +54,10 @@ singularity run DIVAnd.sif my_script.jl
 ``` 
 (where `my_script.jl` has to be substitued by the correct file name).
 
+## Acknowledgements
+
+The development of this container has been made possible thanks to [PHIDIAS](https://www.phidias-hpc.eu/) project (2019-2022).
+
+The PHIDIAS project has received funding from the European Union's Connecting Europe Facility under grant agreement n° INEA/CEF/ICT/A2018/1810854. 
+
 
