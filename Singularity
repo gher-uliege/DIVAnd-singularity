@@ -10,21 +10,34 @@ From: julia:1.9.3
     apt-get -y update
     apt-get -y install curl
     apt-get -y install emacs-nox
-    apt-get -y install python3-pip
-    pip3 install matplotlib
+    apt-get -y install python3.10
+    apt-get -y install python3-matplotlib
     echo $HOME $JULIA_DEPOT_PATH
     export JULIA_DEPOT_PATH=/opt/julia-depot
-    julia --eval 'using Pkg; pkg"add HTTP"'
-    julia --eval 'using Pkg; pkg"add PhysOcean"'
-    julia --eval 'using Pkg; pkg"add https://github.com/gher-ulg/OceanPlot.jl#master"'
-    julia --eval 'using Pkg; pkg"add https://github.com/gher-ulg/DIVAnd.jl#master"'
-    julia --eval 'using Pkg; pkg"add Missings"'
-    julia --eval 'using Pkg; pkg"add PackageCompiler"'
-    julia --eval 'using Pkg; pkg"add PyPlot Interpolations MAT"'
-    julia --eval 'using Pkg; pkg"add JSON SpecialFunctions Interact Roots"'
-    julia --eval 'using Pkg; pkg"add Gumbo AbstractTrees Glob NCDatasets Knet CSV"'
-    julia --eval 'using Pkg; pkg"add DataStructures Compat Mustache StableRNGs"'
-    julia --eval 'using Pkg; pkg"precompile"'
+    julia --eval 'import Pkg; Pkg.add("PhysOcean")'
+    julia --eval 'import Pkg; Pkg.add(url="https://github.com/gher-ulg/OceanPlot.jl", rev="master")'
+    julia --eval 'import Pkg; Pkg.add(url="https://github.com/gher-ulg/DIVAnd.jl", rev="master")'
+    julia --eval 'import Pkg; Pkg.add("Missings")'
+    julia --eval 'import Pkg; Pkg.add("PackageCompiler")'
+    julia --eval 'import Pkg; Pkg.add("PyPlot")' 
+    julia --eval 'import Pkg; Pkg.add("Interpolations")' 
+    julia --eval 'import Pkg; Pkg.add("MAT")'
+    julia --eval 'import Pkg; Pkg.add("JSON")' 
+    julia --eval 'import Pkg; Pkg.add("SpecialFunctions")' 
+    julia --eval 'import Pkg; Pkg.add("Interact")'
+    julia --eval 'import Pkg; Pkg.add("Roots")'
+    julia --eval 'import Pkg; Pkg.add("Gumbo")'
+    julia --eval 'import Pkg; Pkg.add("AbstractTrees")' 
+    julia --eval 'import Pkg; Pkg.add("Glob")' 
+    julia --eval 'import Pkg; Pkg.add("NCDatasets")' 
+    julia --eval 'import Pkg; Pkg.add("Knet")'
+    julia --eval 'import Pkg; Pkg.add("CSV")'
+    julia --eval 'import Pkg; Pkg.add("DataStructures")'
+    julia --eval 'import Pkg; Pkg.add("Compat")'
+    julia --eval 'import Pkg; Pkg.add("Mustache")'
+    julia --eval 'import Pkg; Pkg.add("StableRNGs")'
+    julia --eval 'import Pkg; Pkg.add("HTTP")'
+    #julia --eval 'import Pkg; Pkg.precompile()'
 
     # does not work with singularity 3.4.0
     #chmod -R 777 /opt
