@@ -1,5 +1,6 @@
 [![Build Status](https://github.com/gher-ulg/DIVAnd-singularity/workflows/Singularity%20Build/badge.svg)](https://github.com/gher-ulg/DIVAnd-singularity/actions?query=workflow%3A%22Singularity+Build%22) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7014264.svg)](https://doi.org/10.5281/zenodo.7014264) ![GitHub top language](https://img.shields.io/github/languages/top/gher-ulg/DIVAnd-singularity)      
-![GitHub issues](https://img.shields.io/github/issues/gher-uliege/DIVAnd-singularity) ![GitHub all releases](https://img.shields.io/github/downloads/gher-uliege/DIVAnd-singularity/total) ![GitHub contributors](https://img.shields.io/github/contributors/gher-uliege/DIVAnd-singularity) ![GitHub last commit](https://img.shields.io/github/last-commit/gher-uliege/DIVAnd-singularity)
+![GitHub issues](https://img.shields.io/github/issues/gher-uliege/DIVAnd-singularity) ![GitHub all releases](https://img.shields.io/github/downloads/gher-uliege/DIVAnd-singularity/total) ![GitHub contributors](https://img.shields.io/github/contributors/gher-uliege/DIVAnd-singularity) ![GitHub last commit](https://img.shields.io/github/last-commit/gher-uliege/DIVAnd-singularity)      
+[![Static Badge](https://img.shields.io/badge/Project-PHIDIAS-blue)](https://www.phidias-hpc.eu/)
 
 
 # DIVAnd-singularity
