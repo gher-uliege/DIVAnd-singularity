@@ -15,7 +15,6 @@ From: julia:1.10.4
     echo $HOME $JULIA_DEPOT_PATH
     export JULIA_DEPOT_PATH=/opt/julia-depot
     julia --eval 'import Pkg; Pkg.add("PhysOcean")'
-    julia --eval 'import Pkg; Pkg.add(url="https://github.com/gher-ulg/OceanPlot.jl", rev="master")'
     julia --eval 'import Pkg; Pkg.add("DIVAnd")'
     julia --eval 'import Pkg; Pkg.add("Missings")'
     julia --eval 'import Pkg; Pkg.add("PackageCompiler")'
@@ -30,18 +29,12 @@ From: julia:1.10.4
     julia --eval 'import Pkg; Pkg.add("AbstractTrees")' 
     julia --eval 'import Pkg; Pkg.add("Glob")' 
     julia --eval 'import Pkg; Pkg.add("NCDatasets")' 
-    julia --eval 'import Pkg; Pkg.add("Knet")'
     julia --eval 'import Pkg; Pkg.add("CSV")'
     julia --eval 'import Pkg; Pkg.add("DataStructures")'
     julia --eval 'import Pkg; Pkg.add("Compat")'
     julia --eval 'import Pkg; Pkg.add("Mustache")'
     julia --eval 'import Pkg; Pkg.add("StableRNGs")'
     julia --eval 'import Pkg; Pkg.add("HTTP")'
-    #julia --eval 'import Pkg; Pkg.precompile()'
-
-    # does not work with singularity 3.4.0
-    #chmod -R 777 /opt
-    #chmod -R 777 /usr/local/julia
 
 %environment
     export LC_ALL=C.UTF-8
@@ -60,6 +53,5 @@ From: julia:1.10.4
     # https://github.com/JuliaLang/Pkg.jl/pull/733#issuecomment-420811091
     # https://github.com/JuliaLang/Pkg.jl/issues/763
     export JULIA_DEPOT_PATH=$PWD/.julia-depot-singularity:/opt/julia-depot
-    #export JULIA_DEPOT_PATH=/opt/julia-depot
     echo JULIA_DEPOT_PATH: $JULIA_DEPOT_PATH
     julia "$@"
