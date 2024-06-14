@@ -16,7 +16,7 @@ From: julia:1.10.4
     export JULIA_DEPOT_PATH=/opt/julia-depot
     julia --eval 'import Pkg; Pkg.add("PhysOcean")'
     julia --eval 'import Pkg; Pkg.add(url="https://github.com/gher-ulg/OceanPlot.jl", rev="master")'
-    julia --eval 'import Pkg; Pkg.add("DIVAnd.jl", rev="master")'
+    julia --eval 'import Pkg; Pkg.add("DIVAnd")'
     julia --eval 'import Pkg; Pkg.add("Missings")'
     julia --eval 'import Pkg; Pkg.add("PackageCompiler")'
     julia --eval 'import Pkg; Pkg.add("PyPlot")' 
