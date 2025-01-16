@@ -1,8 +1,8 @@
 Bootstrap: docker
-From: julia:1.10.5
+From: julia:1.11.2
 
 %help
-    Julia 1.10.5 with DIVAnd (run from a writable directory to create .julia-depot-singularity)
+    Julia 1.11.2 with DIVAnd (run from a writable directory to create .julia-depot-singularity)
 
 
 %post
