@@ -24,9 +24,8 @@ jobs:
           build-essential \
           libssl-dev \
           uuid-dev \
-          libfuse3 \
+          libfuse \
           libfuse-dev \
-          libfuse3-dev \
           libgpgme11-dev \
           squashfs-tools \
           libseccomp-dev \
