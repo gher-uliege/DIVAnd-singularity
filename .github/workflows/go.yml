@@ -24,7 +24,6 @@ jobs:
           build-essential \
           libssl-dev \
           uuid-dev \
-          libfuse \
           libfuse-dev \
           libgpgme11-dev \
           squashfs-tools \
