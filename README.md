@@ -6,7 +6,7 @@
 # DIVAnd-singularity
 Singularity container for `DIVAnd`, the interpolation tool (https://github.com/gher-uliege/DIVAnd.jl).
 
-The container installs the last stable release of [`Julia`](https://julialang.org/), DIVAnd and other required Julia packages.
+The container installs the last stable release of [`Julia`](https://julialang.org/), `DIVAnd` and other required Julia packages.
 
 ## Dependencies
 
@@ -14,7 +14,7 @@ The container installs the last stable release of [`Julia`](https://julialang.or
 
 ## Building
 
-After checking out the source, the singularity container can be build using:
+After checking out the source, the singularity container is build using:
 
 ```bash
 rm -f DIVAnd.sif; sudo singularity build DIVAnd.sif Singularity
