@@ -26,7 +26,7 @@ jobs:
 
     - name: Install Singularity
       env:
-        SINGULARITY_VERSION: 3.7.4
+        SINGULARITY_VERSION: 4.3.0
       run: |
         echo "Working with Singularity version ${SINGULARITY_VERSION}"
         export GOPATH=/tmp/go
@@ -34,7 +34,7 @@ jobs:
         sudo mkdir -p /usr/local/var/singularity/mnt && \
         mkdir -p $GOPATH/src/github.com/sylabs && \
         cd $GOPATH/src/github.com/sylabs && \
-        wget -qO- "https://github.com/sylabs/singularity/releases/download/v${SINGULARITY_VERSION}/singularity-${SINGULARITY_VERSION}.tar.gz" | \
+        wget -qO- "https://github.com/sylabs/singularity/releases/download/v${SINGULARITY_VERSION}/singularity-ce-${SINGULARITY_VERSION}.tar.gz" | \
         tar xzv && \
         cd singularity && \
         ./mconfig -p /usr/local && \
