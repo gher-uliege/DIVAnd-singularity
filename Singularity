@@ -10,6 +10,7 @@ From: julia:1.11.5
     apt-get -y install curl
     apt-get -y install emacs-nox
     apt-get -y libfuse3
+    apt-get -y libfuse-dev
     apt-get -y libfuse3-dev
     #apt-get -y install python3.10
     #apt-get -y install python3-matplotlib
